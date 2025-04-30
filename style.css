@@ -107,3 +107,47 @@ footer {
   color: #777;
   margin-top: 3rem;
 }
+.fondo-con-imagen {
+  background-image: url('assets/images/nancy.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.fondo-con-imagen::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* oscurece el fondo para que se lea el texto */
+  z-index: 1;
+}
+
+.fondo-con-imagen .contenido {
+  z-index: 2;
+  max-width: 700px;
+}
+
+.fondo-con-imagen h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.fondo-con-imagen h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #eee;
+}
+
+.fondo-con-imagen p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  color: #ddd;
+}
