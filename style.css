@@ -120,13 +120,21 @@ body {
   }
 
   .bloque {
-    background-position: top center;
+    background-position: center center;
     height: 90vh;
-    padding-bottom: 2.5rem;
+    padding-bottom: 3rem;
   }
 
   .bloque-btn {
     font-size: 1rem;
     padding: 0.7rem 1.3rem;
+  }
+
+  /* Ajuste específico para la sección Podcast */
+  .bloque.podcast {
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    padding-bottom: 4rem;
   }
 }
