@@ -5,6 +5,34 @@
         </strong>
 </h2>
 </div>
+<!-- BUSCADOR AGREGADO -->
+<div style="text-align: center; margin: 20px 0;">
+  <input type="text" id="buscador-proyectos" placeholder="Buscar proyecto..." style="width: 60%; padding: 10px; font-size: 18px; border: 1px solid #ccc; border-radius: 4px;">
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("buscador-proyectos");
+    const links = document.querySelectorAll("a.d-inline-block");
+
+    input.addEventListener("input", function () {
+      const filtro = input.value.toLowerCase();
+
+      links.forEach(link => {
+        const texto = link.textContent.toLowerCase();
+        if (texto.includes(filtro)) {
+          link.style.display = "block";
+        } else {
+          link.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<div class="ss-separator w-100" data-ss-border="" data-ss-empty="false" data-ss-id="cnfc19JRBENfDhCNLDMRC" data-ss-padding="" style="height:50px !important"></div>
+<!-- CONTINÚA EL RESTO DEL CÓDIGO HTML DEL USUARIO -->
+
 <div class="ss-separator w-100" data-ss-border="" data-ss-empty="false" data-ss-id="cnfc19JRBENfDhCNLDMRC" data-ss-padding="" style="height:50px !important"></div>
 <div data-ss-border="" data-ss-fontsize='{"desktop":"25px"}' data-ss-id="OUwDYuZ_kq_QQQZXTmbwT" data-ss-padding="" data-ss-rich-paragraph="true" style="text-align: left; font-size: 25px;">
 <p data-ss-id="9NM7kDfiqdZoF1VCNmpZl" style="font-size: 25px;">
