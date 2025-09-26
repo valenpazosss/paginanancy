@@ -8,35 +8,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- ===== HEADER ===== -->
   <header>
     <nav class="nav-responsive">
-      <div class="nav-wrap">
-        <a class="brand" href="index.html">
-          <span class="brand-name">Nancy Almada</span>
-        </a>
-
-        <!-- Toggle -->
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="menu-icon" aria-label="Abrir menú" title="Menú">
-          <span class="bar"></span>
-        </label>
-
-        <!-- Menú -->
-        <ul class="menu">
-          <li><a href="index.html" class="nav-link" aria-current="page">Inicio</a></li>
-          <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
-          <li><a href="biografia.html" class="nav-link">Biografía</a></li>
-          <li><a href="publicaciones.html" class="nav-link">Publicaciones</a></li>
-          <li><a href="podcast.html" class="nav-link">Podcast</a></li>
-          <li><a href="contacto.html" class="nav-cta">Contacto</a></li>
-        </ul>
-      </div>
+      <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">☰ Menú</label>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="proyectos.html">Proyectos</a></li>
+        <li><a href="biografia.html">Biografía</a></li>
+        <li><a href="publicaciones.html">Publicaciones</a></li>
+        <li><a href="podcast.html">Podcast</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <main>
     <section class="bloque" style="background-image: url('assets/images/proyectos.jpg')">
       <a href="proyectos.html" class="bloque-btn">Proyectos Legislativos</a>
@@ -55,20 +41,10 @@
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; 2025 Nancy Almada. Todos los derechos reservados.</p>
   </footer>
 
   <script src="script.js"></script>
-  <script>
-    // Cierra el menú en mobile al hacer clic en un link
-    document.querySelector('.menu')?.addEventListener('click', e => {
-      if (e.target.closest('a')) {
-        const t = document.getElementById('menu-toggle');
-        if (t) t.checked = false;
-      }
-    });
-  </script>
 </body>
 </html>
