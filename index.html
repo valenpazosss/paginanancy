@@ -4,17 +4,16 @@
   <meta charset="UTF-8">
   <title>Nancy Almada - Legisladora</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
+  <!-- ===== HEADER ===== -->
   <header>
     <nav class="nav-responsive">
       <div class="nav-wrap">
-        <!-- Marca (opcional; podés quitar el logo si no lo usás) -->
         <a class="brand" href="index.html">
-          <!-- <img class="brand-logo" src="assets/images/logo.svg" alt="Logo"> -->
           <span class="brand-name">Nancy Almada</span>
         </a>
 
@@ -26,7 +25,7 @@
 
         <!-- Menú -->
         <ul class="menu">
-          <li><a href="index.html" class="nav-link active" aria-current="page">Inicio</a></li>
+          <li><a href="index.html" class="nav-link" aria-current="page">Inicio</a></li>
           <li><a href="proyectos.html" class="nav-link">Proyectos</a></li>
           <li><a href="biografia.html" class="nav-link">Biografía</a></li>
           <li><a href="publicaciones.html" class="nav-link">Publicaciones</a></li>
@@ -37,41 +36,39 @@
     </nav>
   </header>
 
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <main>
-    <!-- Quité los inline styles y uso IDs para setear fondos desde CSS -->
-    <section id="hero-proyectos" class="bloque">
+    <section class="bloque" style="background-image: url('assets/images/proyectos.jpg')">
       <a href="proyectos.html" class="bloque-btn">Proyectos Legislativos</a>
     </section>
 
-    <section id="hero-podcast" class="bloque bloque-podcast">
+    <section class="bloque bloque-podcast" style="background-image: url('assets/images/podcast.jpg')">
       <a href="podcast.html" class="bloque-btn">Podcast</a>
     </section>
 
-    <section id="hero-redes" class="bloque">
+    <section class="bloque" style="background-image: url('assets/images/redes.jpg')">
       <a href="redes.html" class="bloque-btn">Redes</a>
     </section>
 
-    <section id="hero-contacto" class="bloque">
+    <section class="bloque" style="background-image: url('assets/images/contacto.jpg')">
       <a href="contacto.html" class="bloque-btn">Contacto</a>
     </section>
   </main>
 
+  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; 2025 Nancy Almada. Todos los derechos reservados.</p>
   </footer>
 
-  <!-- Si ya tenés script.js, lo dejamos igual -->
   <script src="script.js"></script>
-
-  <!-- Opcional: cerrar el menú al tocar un link en mobile -->
   <script>
-    (function(){
-      const toggle = document.getElementById('menu-toggle');
-      const menu = document.querySelector('.menu');
-      menu?.addEventListener('click', (e) => {
-        if (e.target.closest('a')) toggle.checked = false;
-      });
-    })();
+    // Cierra el menú en mobile al hacer clic en un link
+    document.querySelector('.menu')?.addEventListener('click', e => {
+      if (e.target.closest('a')) {
+        const t = document.getElementById('menu-toggle');
+        if (t) t.checked = false;
+      }
+    });
   </script>
 </body>
 </html>
